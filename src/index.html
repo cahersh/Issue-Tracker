@@ -14,44 +14,47 @@
     <body style="padding:40px">
         <h1>Issue Tracker</h1>
         <h2>Add New Issue:</h2>
-        <form class="ui form issue_form">
-            <div class="field">
-              <label>Description of Issue</label>
-              <input type="text" name="description" id="description" placeholder="Describe the issue">
-            </div>
-            <div class="field">
-              <label>Severity</label>
-              <select class="ui fluid dropdown" id="severity">
-                <option value="low">Low (1-2 weeks)</option>
-                <option value="low">Medium (1 week)</option>
-                <option value="low">High (3-4 days)</option>
-                <option value="low">Urgent (1 day)</option>
-              </select>
-            </div>
-            <div class="field">
-                <label>Assigned To</label>
-                <input type="text" name="responsible" id="responsible" placeholder="Enter responsible">
-            </div>
-            <button class="ui button" type="submit" style="background-color:royalblue; color: white;">Submit</button>
-        </form>
-
-        <div class="ui message">
-          <div class="card">
-            <div class="content">
-              <div class="meta" style="padding-bottom: 20px;">Issue ID: 42278309</div>
-              <div class="header" style="font-size: 18px; padding-bottom: 15px">Delete function not working in details view</div>
-              <span class="meta"><i class="clock outline icon"></i>Medium</span>
-              <span class="meta"><i class="user icon"></i>David</span></br>
-              <div style="padding-top: 10px;">
-                  <button class="ui button" style="background-color:#d9b46c; color: white;">Close</button>
-                  <button class="ui button" style="background-color:#de4e4e; color: white;">Delete</button>
+        <div class="form-container" style="padding-bottom: 20px">
+          <form class="ui form issue_form">
+              <div class="field">
+                <label>Description of Issue</label>
+                <input type="text" name="description" id="description" placeholder="Describe the issue">
+              </div>
+              <div class="field">
+                <label>Severity</label>
+                <select class="ui fluid dropdown" id="severity">
+                  <option value="low">Low (1-2 weeks)</option>
+                  <option value="low">Medium (1 week)</option>
+                  <option value="low">High (3-4 days)</option>
+                  <option value="low">Urgent (1 day)</option>
+                </select>
+              </div>
+              <div class="field">
+                  <label>Assigned To</label>
+                  <input type="text" name="responsible" id="responsible" placeholder="Enter responsible">
+              </div>
+              <button class="ui button" type="submit" style="background-color:royalblue; color: white;">Submit</button>
+          </form>
+        </div>
+      <div class="open_item_list">
+        <!--
+          <div class="ui message">
+              <div class="card">
+                <div class="content">
+                  <div class="meta" style="padding-bottom: 20px;">Issue ID: 42278309</div>
+                  <div class="header" style="font-size: 18px; padding-bottom: 15px">Delete function not working in details view</div>
+                  <span class="meta"><i class="clock outline icon"></i>Medium</span>
+                  <span class="meta"><i class="user icon"></i>David</span></br>
+                  <div style="padding-top: 10px;">
+                      <button class="ui button" style="background-color:#d9b46c; color: white;">Close</button>
+                      <button class="ui button" style="background-color:#de4e4e; color: white;">Delete</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+        -->
+      </div>
 
-        
-        
         <script src="index.js" async defer></script>
     </body>
 </html>
