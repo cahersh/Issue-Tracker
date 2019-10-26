@@ -1,6 +1,6 @@
 import {elements} from './views/base';
 import * as issueSubmitView from './views/issueSubmitView';
-import * as openIssueListView from './views/issueListView';
+import * as issueListView from './views/issueListView';
 import Issue from './models/Issue';
 
 const state = {
@@ -28,7 +28,7 @@ const controlIssueSubmit = () => {
         issueSubmitView.clearInput(); 
 
         // 4. Render issue into open list view UI
-        openIssueListView.renderNewIssue(issue);
+        issueListView.renderNewIssue(issue);
     }
 }
 
@@ -36,4 +36,22 @@ const controlIssueSubmit = () => {
 elements.issueForm.addEventListener('submit', e => {
     e.preventDefault();
     controlIssueSubmit();
+});
+
+// Purpose: Issue Comment controller
+// Inputs: id - parent id of the close button that was pressed
+const controlIssueComment = (id) => {
+    console.log(`Control Issue Comment id: ${id}`)
+    // Insert comment box & save button
+    issueListView.renderCloseComment(id);
+};
+
+// Purpose: Event listener for Close button
+elements.issues.addEventListener('click', e => {
+    if(e.target.matches('.close_btn')) {
+        // Close button pressed
+        // Find issue ID for close button pressed
+        let id = e.target.parentNode.parentNode.parentNode.parentNode.id;
+        controlIssueComment(id);
+    }
 });
