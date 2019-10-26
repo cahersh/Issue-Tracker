@@ -15,7 +15,13 @@ const controlIssueSubmit = () => {
     if (issueObj) {
         // 2. New issue object and add to state
         let issue = new Issue(issueObj.description, issueObj.severity, issueObj.responsible);
+        
+        // Generate ID
+        issue.id = issue.generateID();
+        
+        // Push issue to state openIssues
         state.openIssues.push(issue);
+        console.log(state.openIssues);
 
         // 3. Prepare UI for results
         // Clears issue form inputs on issueSubmitView view
@@ -23,7 +29,6 @@ const controlIssueSubmit = () => {
 
         // 4. Render issue into open list view UI
         openIssueListView.renderOpenIssue(issue);
-
     }
 }
 
