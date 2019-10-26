@@ -9,14 +9,49 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
     </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1>Blank Project!</h1>
+    <body style="padding:40px">
+        <h1>Issue Tracker</h1>
+        <h2>Add New Issue:</h2>
+        <form class="ui form">
+            <div class="field">
+              <label>Description of Issue</label>
+              <input type="text" name="description" placeholder="Describe the issue">
+            </div>
+            <div class="field">
+              <label>Severity</label>
+              <select class="ui fluid dropdown">
+                <option value="low">Low (1-2 weeks)</option>
+                <option value="low">Medium (1 week)</option>
+                <option value="low">High (3-4 days)</option>
+                <option value="low">Urgent (1 day)</option>
+              </select>
+            </div>
+            <div class="field">
+                <label>Assigned To</label>
+                <input type="text" name="responsible" placeholder="Enter responsible">
+            </div>
+            <button class="ui button" type="submit" style="background-color:royalblue; color: white;">Submit</button>
+        </form>
+
+        <div class="ui message">
+          <div class="card">
+            <div class="content">
+              <div class="meta" style="padding-bottom: 20px;">Issue ID: 42278309</div>
+              <div class="header" style="font-size: 18px; padding-bottom: 15px">Delete function not working in details view</div>
+              <span class="meta"><i class="clock outline icon"></i>Medium</span>
+              <span class="meta"><i class="user icon"></i>David</span></br>
+              <div style="padding-top: 10px;">
+                  <button class="ui button" style="background-color:#d9b46c; color: white;">Close</button>
+                  <button class="ui button" style="background-color:#de4e4e; color: white;">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         
-        <script src="" async defer></script>
+        
+        <script src="index.js" async defer></script>
     </body>
 </html>
