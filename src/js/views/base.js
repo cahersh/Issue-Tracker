@@ -5,5 +5,5 @@ export const elements = {
     issueDescription: document.getElementById("description"),
     issueSeverity: document.getElementById("severity"),
     issueResponsible: document.getElementById("responsible"),
-    openIssues: document.querySelector('.open_item_list')
+    openIssues: document.querySelector('.issue_list')
 };

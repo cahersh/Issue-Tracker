@@ -2,11 +2,12 @@ import {elements} from './base'; //Holds all DOM elements
 
 // Purpose: Creates open issue markup
 // Input: the issue object
-const createOpenIssue = (iss) => `
+const createIssue = (iss) => `
     <div class="ui message">
         <div class="card">
             <div class="content">
-                <div class="meta" style="padding-bottom: 20px;">Issue ID: ${iss.id}</div>
+                <div class="meta" style="padding-bottom: 10px;">Issue ID: ${iss.id}</div>
+                <div class="meta" style="padding-bottom: 20px;">Status: ${iss.status}</div>
                 <div class="header" style="font-size: 18px; padding-bottom: 15px">${iss.description}</div>
                 <span class="meta"><i class="clock outline icon"></i>${iss.severity}</span>
                 <span class="meta"><i class="user icon"></i>${iss.responsible}</span></br>
@@ -21,9 +22,9 @@ const createOpenIssue = (iss) => `
 
 // Purpose: Renders the open issue to the open issue list
 // Input: the issue object
-export const renderOpenIssue = iss => {
+export const renderNewIssue = iss => {
     // Call createOpenIssue to create markup
-    const issue = createOpenIssue(iss);
+    const issue = createIssue(iss);
 
     // Insert issue into HTML
     elements.openIssues.insertAdjacentHTML('afterbegin', issue);

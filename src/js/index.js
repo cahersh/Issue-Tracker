@@ -1,6 +1,6 @@
 import {elements} from './views/base';
 import * as issueSubmitView from './views/issueSubmitView';
-import * as openIssueListView from './views/openIssueListView';
+import * as openIssueListView from './views/issueListView';
 import Issue from './models/Issue';
 
 const state = {
@@ -28,7 +28,7 @@ const controlIssueSubmit = () => {
         issueSubmitView.clearInput(); 
 
         // 4. Render issue into open list view UI
-        openIssueListView.renderOpenIssue(issue);
+        openIssueListView.renderNewIssue(issue);
     }
 }
 

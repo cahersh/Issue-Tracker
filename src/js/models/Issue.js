@@ -3,6 +3,7 @@ export default class Issue {
         this.description = description;
         this.severity = severity;
         this.responsible = responsible;
+        this.status = 'Open';
     }
 
     generateID() {
