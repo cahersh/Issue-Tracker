@@ -111,6 +111,9 @@ export const updateIssueStatus = (id, issue) => {
 
     // re-render the issue card to update the issue status
     document.getElementById(`${id}`).insertAdjacentHTML('afterbegin', markup);
+
+    // Set Closed background color to gray
+    document.getElementById(`${id}`).setAttribute('style', 'background-color: #999;');
 };
 
 // Purpose: Remove the deleted issue from the list
