@@ -4,7 +4,7 @@ export default class Issue {
         this.severity = severity;
         this.responsible = responsible;
         this.status = 'Open';
-    }
+    };
 
     generateID() {
         let now = new Date();
@@ -19,7 +19,12 @@ export default class Issue {
         timestamp += now.getMilliseconds().toString();
         this.id = timestamp;
         return timestamp;
-    }
+    };
+
+    addCloseComment(comm) {
+        this.comment = comm;
+        return this.comment;
+    };
 
     // TODO: function to calculate due date
 };
