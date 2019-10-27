@@ -48,6 +48,9 @@ export const renderCloseCommentForm = (id) => {
 
     // Insert close comment form into issue
     document.getElementById(`${id}`).insertAdjacentHTML('beforeend', markup);
+
+    // Focus on the input
+    document.getElementById('comment').focus();
 };
 
 // Purpose: Removes the close comment markup after comment is entered
